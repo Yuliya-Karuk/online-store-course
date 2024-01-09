@@ -12,21 +12,20 @@ const NavBar = observer(() => {
   const {user} = useContext(Context);
   return (
     <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <NavLink style={{color: 'white'}} to={SHOP_ROUTE}>BuyDevice</NavLink>
-          {user.isAuth ?
-            <Nav className="ml-auto" style={{color: 'white'}}>
-              <Button variant={"outline-light"} className="me-2">Admin panel</Button>
-              <Button variant={"outline-light"}>Log out</Button>
-            </Nav>
-            :
-            <Nav className="ml-auto" style={{color: 'white'}}>
-              <Button variant={"outline-light"} onClick={() => user.setIsAuth(true)}>Authorization</Button>
-            </Nav>
-          }
-
-        </Container>
-      </Navbar>
+      <Container>
+        <NavLink style={{color: 'white'}} to={SHOP_ROUTE}>BuyDevice</NavLink>
+        {user.isAuth ?
+          <Nav className="ml-auto" style={{color: 'white'}}>
+            <Button variant={"outline-light"} className="me-2">Admin panel</Button>
+            <Button variant={"outline-light"}>Log out</Button>
+          </Nav>
+          :
+          <Nav className="ml-auto" style={{color: 'white'}}>
+            <Button variant={"outline-light"} onClick={() => user.setIsAuth(true)}>Authorization</Button>
+          </Nav>
+        }
+      </Container>
+    </Navbar>
   );
 });
 
