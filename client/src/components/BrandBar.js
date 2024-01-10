@@ -11,13 +11,13 @@ const BrandBar = observer(() => {
   return (
     <Row className='d-flex'>
       {device.brands.map(brand =>
-        <Col className='p-0'>
+        <Col className='p-0' xs lg="2">
           <Card
             key={brand.id}
             style={{cursor: 'pointer'}}
             border={brand.id === device.SelectedBrand.id ? 'danger' : '--bs-border-color'}
             onClick={() => device.setSelectedBrand(brand)}
-            className='p-3'
+            className='p-2'
           >
             {brand.name}
           </Card>

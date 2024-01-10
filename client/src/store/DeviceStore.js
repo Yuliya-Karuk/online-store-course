@@ -17,6 +17,10 @@ export default class DeviceStore {
       {id: 2, name: 'Iphone 13 pro', price: 100000, rating: 5, img: 'https://ir.ozone.ru/s3/multimedia-c/wc1000/6765094956.jpg'},
       {id: 3, name: 'Iphone 14 pro', price: 100000, rating: 5, img: 'https://ir.ozone.ru/s3/multimedia-c/wc1000/6765094956.jpg'},
       {id: 4, name: 'Iphone 15 pro', price: 100000, rating: 5, img: 'https://ir.ozone.ru/s3/multimedia-c/wc1000/6765094956.jpg'},
+      {id: 5, name: 'Iphone 12 pro', price: 100000, rating: 5, img: 'https://ir.ozone.ru/s3/multimedia-c/wc1000/6765094956.jpg'},
+      {id: 6, name: 'Iphone 13 pro', price: 100000, rating: 5, img: 'https://ir.ozone.ru/s3/multimedia-c/wc1000/6765094956.jpg'},
+      {id: 7, name: 'Iphone 14 pro', price: 100000, rating: 5, img: 'https://ir.ozone.ru/s3/multimedia-c/wc1000/6765094956.jpg'},
+      {id: 8, name: 'Iphone 15 pro', price: 100000, rating: 5, img: 'https://ir.ozone.ru/s3/multimedia-c/wc1000/6765094956.jpg'},
     ]
     this._selectedType = {};
     this._selectedBrand = {};
