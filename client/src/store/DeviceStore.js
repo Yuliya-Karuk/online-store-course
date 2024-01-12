@@ -42,11 +42,11 @@ export default class DeviceStore {
     return this._devices;
   }
 
-  get SelectedType() {
+  get selectedType() {
     return this._selectedType;
   }
 
-  get SelectedBrand() {
+  get selectedBrand() {
     return this._selectedBrand;
   }
 }
