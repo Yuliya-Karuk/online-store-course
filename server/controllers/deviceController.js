@@ -13,8 +13,9 @@ class DeviceController {
       const device = await Device.create({name, price, brandId, typeId, img: filename});
 
       if (info) {
-        info = JSON.parse(info);
-        info.array.forEach(i =>
+        let info1;
+        info1 = JSON.parse(info);
+        info1.forEach(i =>
           Device.create({
             title: i.title,
             description: i.description,
@@ -30,22 +31,22 @@ class DeviceController {
   }
 
   async getAll(req, res) {
-    let {brandId, typeId, limit, page} = req.query;
-    page = page || 1;
-    limit = limit || 9;
-    let offset = page * limit - limit;
+    let {brandId, typeId, page, limit} = req.query;
+    let page1 = page || 1;
+    let limit1 = limit || 9;
+    let offset = page1 * limit1 - limit1;
     let devices;
     if (!brandId && !typeId) {
-      devices = await Device.findAndCountAll({limit, offset});
+      devices = await Device.findAndCountAll({limit: limit1, offset: offset});
     }
     if (brandId && !typeId) {
-      devices = await Device.findAndCountAll({where: {brandId}, limit, offset});
+      devices = await Device.findAndCountAll({where: {brandId}, limit: limit1, offset: offset});
     }
     if (!brandId && typeId) {
-      devices = await Device.findAndCountAll({where: {typeId}, limit, offset});
+      devices = await Device.findAndCountAll({where: {typeId}, limit: limit1, offset: offset});
     }
     if (brandId && typeId) {
-      devices = await Device.findAndCountAll({where: {brandId, typeId}, limit, offset});
+      devices = await Device.findAndCountAll({where: {brandId, typeId}, limit: limit1, offset: offset});
     }
     return res.json(devices);
   }

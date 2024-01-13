@@ -9,21 +9,34 @@ const BrandBar = observer(() => {
   const {device} = useContext(Context);
 
   return (
-    <Row className='d-flex'>
+    // <Row className='d-flex'>
+    //   {device.brands.map(brand =>
+    //     <Col className='p-0' xs lg="2">
+    //       <Card
+    //         key={brand.id}
+    //         style={{cursor: 'pointer'}}
+    //         border={brand.id === device.selectedBrand.id ? 'danger' : '--bs-border-color'}
+    //         onClick={() => device.setSelectedBrand(brand)}
+    //         className='p-2'
+    //       >
+    //         {brand.name}
+    //       </Card>
+    //     </Col>
+    //   )}
+    // </Row>
+    <Col className='d-flex gap-2'>
       {device.brands.map(brand =>
-        <Col className='p-0' xs lg="2">
           <Card
             key={brand.id}
             style={{cursor: 'pointer'}}
             border={brand.id === device.selectedBrand.id ? 'danger' : '--bs-border-color'}
             onClick={() => device.setSelectedBrand(brand)}
-            className='p-2'
+            className='p-2 px-3'
           >
             {brand.name}
           </Card>
-        </Col>
       )}
-    </Row>
+    </Col>
   );
 });
 
